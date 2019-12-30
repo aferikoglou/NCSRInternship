@@ -1,10 +1,10 @@
-# Chimera patterns in 2D networks of coupled Fitzhugh-Nagumo neurons
+# Chimera patterns in 2D networks of coupled FitzHugh-Nagumo neurons
 
-One Paragraph of project description goes here 
+In this project we recreated part of the results of the paper entitled __Chimera patterns in two-dimensional networks of coupled neurons__ in docs folder. We created a simulation of a network of FitzHugh-Nagumo oscillators coupled in a two-dimensional toroidal geometry in order to observe the __Chimera States__ that arise. For the simulation algorithm we used __Euler__ numerical method and __Runge-Kutta__ numerical method with two and four stages. For the acceleration of the simulation we used __OpenMP API__.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project on your local machine for development and testing purposes.
 
 ### Prerequisites
 
