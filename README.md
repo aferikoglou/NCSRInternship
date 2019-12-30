@@ -6,8 +6,6 @@ In this project we recreated part of the results of the paper __Chimera patterns
 
 The simulation program gets as command line arguments the name of the output folder and a set of simulation parameters (grid size, coupling radius, coupling phase, simulation time and seed for the random initial conditions generator). The simulation creates a *.dat* file every 20 time units that contains the potential value of each neuron in the grid. It also creates a *.dat* file for the mean phase velocity of each neuron in the grid, a *.dat* file for the mean phase velocity horizontal cut (the cut is made for j = 50) and a *.dat* file with the total simulation time. After the simulation is finished a python script creates *.png* files for each potential *.dat* file, for the mean phase velocity *.dat* file and the mean phase velocity horizontal cut *.dat* file. Finally, a *.gif* file is created to demonstrate the potential evolution through time.
 
-This project was created through my *Internship* in *National Centre of Scientific Research "Demokritos"* supervised by *Dr. Astero Provata*.
-
 ## Getting Started
 
 These instructions will get you a copy of the project on your local machine.
@@ -61,3 +59,9 @@ Here we demonstrate the output *.png* and *.gif* files for the parameters in* Ru
 
 * *Potential GIF*
 <img src="images/POT_GIF.gif" width="360" height="360">
+
+## Author
+
+* **Ferikoglou Aggelos**
+
+This project was created through my *Internship* in *National Centre of Scientific Research "Demokritos"* supervised by *Dr. Astero Provata*.
