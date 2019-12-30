@@ -12,31 +12,34 @@ These instructions will get you a copy of the project on your local machine for 
 
 * C++ compiler
 * Python 3
+    - [PIL package](https://pypi.org/project/Pillow/)
 * Gnuplot
 
-What things you need to install the software and how to install them
+### Simulation Setup
+
+After downloading the software in the Prerequisites section you can clone this repository on your local machine.
+
+Before you start create a folder with the name resources. This will be the folder in which the output folders will be created.
+
+Compilation of the simulation file
 
 ```
-Give examples
+g++ -Wall -O3 -fopenmp -o .\FHN_sim_RK2.exe .\FHN_sim_RK2.cpp
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Run the simulation
 
 ```
-Give the example
+/* .\FHN_sim_RK2.exe simulation_name grid_dimension coupling_radius coupling_phase total_simulation_time seed_for_random_number_generator */
+
+.\FHN_sim_RK2.exe simulation_N_100_R_33 100 33 1.370796 2000 15885 
 ```
 
-And repeat
+Run python script for output
 
 ```
-until finished
+python .\out_plotting_script.py resources simulation_N_100_R_33
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
