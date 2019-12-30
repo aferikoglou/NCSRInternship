@@ -56,4 +56,4 @@ Here we demonstrate the output .png files for the parameters in Run simulation s
 <img src="images/MPV_HORCUT.png" width="300" height="300">
 
 * __Potential GIF__
-<img src="images/POT_GIF.gif" width="300" height="300">
+<img src="images/POT_GIF.gif" width="350" height="350">
