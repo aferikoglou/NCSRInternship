@@ -41,7 +41,7 @@ python .\out_plotting_script.py resources simulation_N_100_R_33
 
 ## Sample Output
 
-Here we demonstrate the output .png files for the parameters in Run simulation section.
+Here we demonstrate the output .png and .gif files for the parameters in Run simulation section.
 
 * __Initial conditions__
 <img src="images/POT_IT_000000.png" width="350" height="350">
@@ -56,4 +56,4 @@ Here we demonstrate the output .png files for the parameters in Run simulation s
 <img src="images/MPV_HORCUT.png" width="300" height="300">
 
 * __Potential GIF__
-<img src="images/POT_GIF.gif" width="350" height="350">
+<img src="images/POT_GIF.gif" width="360" height="360">
