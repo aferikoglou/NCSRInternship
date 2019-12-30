@@ -54,3 +54,6 @@ Here we demonstrate the output .png files for the parameters in Run simulation s
 
 * __Mean phase velocity horizontal cut at the of the simulation__
 <img src="images/MPV_HORCUT.png" width="300" height="300">
+
+* __Potential GIF__
+<img src="images/POT_GIF.gif" width="300" height="300">

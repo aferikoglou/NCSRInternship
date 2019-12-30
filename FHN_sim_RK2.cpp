@@ -8,7 +8,7 @@
 #include <ctime>
 #include <math.h>
 #include <omp.h>
-#include <io.h> //#include <sys/stat.h> for LINUX
+#include <sys/stat.h> //#include <io.h> for WINDOWS
 
 #define PI 3.14159265359
 
@@ -68,7 +68,7 @@ void init()
 {
     /***** Create output directory *****/
     string simulation_path = "resources//" + simulation;
-    mkdir(simulation_path.c_str()); //mkdir(simulation_path.c_str(), 0777); for LINUX
+    mkdir(simulation_path.c_str(), 0777); // mkdir(simulation_path.c_str()); for WINDOWS
 
     /***** Calculation of total iterations, number of neighbours, coupling matrix and summary coefficient *****/
     total_iter = (total_time / dt);
