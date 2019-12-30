@@ -2,7 +2,7 @@
 
 In this project we recreated part of the results of the paper entitled __Chimera patterns in two-dimensional networks of coupled neurons__ in docs folder. We created a simulation of a network of FitzHugh-Nagumo oscillators coupled in a two-dimensional toroidal geometry in order to observe the __Chimera States__ that arise. For the simulation algorithm we used __Euler__ method and __Runge-Kutta__ method with two and four stages. In order to accelarate the simulation we used __OpenMP__ API.
 
-The simulation program gets as command line arguments the name of the output folder and a set of simulation parameters. The simulation creates __.dat__ files that contain the potential value for each neuron in the grid every 20 time units, the mean phase velocity for each neuron in the grid, the mean phase velocity horizontal cut and the total simulation time. After it is finished a python script creates __.png__ files for each potential .dat file, mean phase velocity .dat file and mean phase velocity horizontal cut .dat file. A __.gif__ file is also created to demonstrate the potential evolution through time. 
+The simulation program gets as command line arguments the name of the output folder and a set of simulation parameters. The simulation creates __.dat__ files that contain the potential value for each neuron in the grid every 20 time units, the mean phase velocity for each neuron in the grid, the mean phase velocity horizontal cut and the total simulation time. After the simulation is finished a python script creates __.png__ files for each potential .dat file, mean phase velocity .dat file and mean phase velocity horizontal cut .dat file. A __.gif__ file is also created to demonstrate the potential evolution through time. 
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ python .\out_plotting_script.py resources simulation_N_100_R_33
 
 Here we demonstrate the output .png and .gif files for the parameters in Run simulation section.
 
-* __Initial conditions__
+* __Initial conditions (random)__
 <img src="images/POT_IT_000000.png" width="350" height="350">
 
 * __Potential for each neuron in the grid after 2000 time units__
