@@ -8,7 +8,7 @@
 #include <ctime>
 #include <math.h>
 #include <omp.h>
-#include <sys/stat.h> //#include <io.h> for WINDOWS
+#include <sys/stat.h> // #include <io.h> for WINDOWS
 
 #define PI 3.14159265359
 
