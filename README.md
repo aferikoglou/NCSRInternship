@@ -57,3 +57,7 @@ Here we demonstrate the output .png and .gif files for the parameters in Run sim
 
 * __Potential GIF__
 <img src="images/POT_GIF.gif" width="360" height="360">
+
+## Author
+
+* **Aggelos Ferikoglou** - *Initial work*
