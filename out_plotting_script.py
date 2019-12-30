@@ -6,7 +6,7 @@ import shutil
 from PIL import Image
 import glob
 
-base_dir = sys.argv[1]
+base_dir = sys.argv[1] 
 simulation = sys.argv[2]
 path_to_sim_out_dir = base_dir + '//' + simulation
 
