@@ -35,11 +35,19 @@ Run simulation
 
 Run python plotting script
 
-```python
+```
 python .\out_plotting_script.py resources simulation_N_100_R_33
 ```
 
 ## Sample Output
 
-Here we demonstrate some 
+Here we demonstrate output .png files for the parameters in Run simulation section.
 
+1) Initial conditions
+![](images/POT_IT_000000.png)
+2) Potential value for each neuron in the grid after 2000 time units
+![](images/POT_IT_200000.png)
+3) Mean phase velocity for each neuron in the grid
+![](images/MPV.png)
+4) Mean phase velocity horizontal cut
+![](images/MPV_HORCUT.png)
