@@ -45,10 +45,12 @@ Here we demonstrate output .png files for the parameters in Run simulation secti
 
 1) Initial conditions
 <img src="images/POT_IT_000000.png" width="250" height="250">
-![](images/POT_IT_000000.png)
+
 2) Potential value for each neuron in the grid after 2000 time units
-![](images/POT_IT_200000.png)
+<img src="images/POT_IT_200000.png" width="250" height="250">
+
 3) Mean phase velocity for each neuron in the grid
-![](images/MPV.png)
+<img src="images/MPV.png" width="250" height="250">
+
 4) Mean phase velocity horizontal cut
-![](images/MPV_HORCUT.png)
+<img src="images/MPV_HORCUT.png" width="250" height="250">
