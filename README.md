@@ -51,10 +51,10 @@ Here we demonstrate the output *.png* and *.gif* files for the parameters in* Ru
 * *Potential for each neuron in the grid after 2000 time units*
 <img src="images/POT_IT_200000.png" width="350" height="350">
 
-* *Mean phase velocity for each neuron in the grid at the of the simulation*
+* *Mean phase velocity for each neuron in the grid at the end of the simulation*
 <img src="images/MPV.png" width="350" height="350">
 
-* *Mean phase velocity horizontal cut at the of the simulation*
+* *Mean phase velocity horizontal cut at the end of the simulation*
 <img src="images/MPV_HORCUT.png" width="300" height="320">
 
 * *Potential GIF*
