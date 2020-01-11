@@ -1,6 +1,6 @@
 # Chimera patterns in 2D networks of coupled FitzHugh-Nagumo neurons
 
-In this project we recreated part of the results of the paper __Chimera patterns in two-dimensional networks of coupled neurons__ in __docs__ folder. We created a simulation of a network of FitzHugh-Nagumo oscillators coupled in a two-dimensional toroidal geometry in order to observe the *Chimera States* that arise. For the simulation algorithm we used *Euler* method and *Runge-Kutta* method with two and four stages. In order to accelarate the simulation we used *OpenMP* API.
+In this project we recreated part of the results of the paper __Chimera patterns in two-dimensional networks of coupled neurons__ in __docs__ folder. We created a simulation of a network of FitzHugh-Nagumo oscillators coupled in a two-dimensional toroidal geometry in order to observe the *Chimera States* that arise. For the simulation algorithm we used *Euler* method and *Runge-Kutta* method with two and four stages. In order to accelarate the simulation we used *OpenMP* API. Part of the simulations was executed in *ARIS* supercomputer.
 
 > Equations (2a) and (2b) of the paper __Chimera patterns in two-dimensional networks of coupled neurons__ were printed incorrectly. The term with the summation must be subtracted from the rest of the equation.
 
@@ -55,10 +55,10 @@ Here we demonstrate the output *.png* and *.gif* files for the parameters in* Ru
 <img src="images/MPV.png" width="350" height="350">
 
 * *Mean phase velocity horizontal cut at the end of the simulation*
-<img src="images/MPV_HORCUT.png" width="300" height="320">
+<img src="images/MPV_HORCUT.png" width="300" height="350">
 
 * *Potential GIF*
-<img src="images/POT_GIF.gif" width="360" height="360">
+<img src="images/POT_GIF.gif" width="350" height="350">
 
 ## Author
 
