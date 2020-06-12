@@ -39,27 +39,27 @@ Here we demonstrate the output *.png* and *.gif* files for the parameters in *Ru
 
 * *Initial conditions (random)*
 <p align="center">
-    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_000000.png" width="350" height="350">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/POT_IT_000000.png" width="350" height="350">
 </p>
 
 * *Potential for each neuron in the grid after 2000 time units*
 <p align="center">
-    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_200000.png" width="350" height="350">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/POT_IT_200000.png" width="350" height="350">
 </p>
 
 * *Mean phase velocity for each neuron in the grid at the end of the simulation*
 <p align="center">
-    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV.png" width="350" height="350">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/MPV.png" width="350" height="350">
 </p>
 
 * *Mean phase velocity horizontal cut at the end of the simulation*
 <p align="center">
-    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV_HORCUT.png" width="300" height="350">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/MPV_HORCUT.png" width="350" height="350">
 </p>
 
 * *Potential GIF*
 <p align="center">
-    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_GIF.gif" width="350" height="350">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/POT_GIF.gif" width="350" height="350">
 </p>
 
 ## Author
