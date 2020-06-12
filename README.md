@@ -54,7 +54,7 @@ Here we demonstrate the output *.png* and *.gif* files for the parameters in *Ru
 
 * *Mean phase velocity horizontal cut at the end of the simulation*
 <p align="center">
-    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/MPV_HORCUT.png" width="350" height="350">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/MPV_HORCUT.png" width="325" height="350">
 </p>
 
 * *Potential GIF*
