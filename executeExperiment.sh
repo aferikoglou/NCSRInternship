@@ -2,16 +2,12 @@
 
 PLOTTING_SCRIPT_PATH='./python/plottingScript.py'
 
-##### Create resources directory if it does not exist #####
-
-mkdir -p ./resources
-
 ##### Simulation parameters #####
 
 N='100'
 R='33'
 PHI='1.370796'
-TOTAL_SIM_TIME_UNITS='200'
+TOTAL_SIM_TIME_UNITS='2000'
 SEED='15885'
 
 ##### Define how many threads are going to be used from OPENMP #####
@@ -40,7 +36,7 @@ elif [ "${METHOD}" == "RK2" ];
 then
 	echo "COMPILING SIMULATION FILE... "
 
-	make RK_SECOND_ORD
+	make RK_TWO_STP
 
 	RK2_SIMULATION_PATH='./bin/FHN_sim_RK2.exe'
 
@@ -53,7 +49,7 @@ elif [ "${METHOD}" == "RK4" ];
 then
 	echo "COMPILING SIMULATION FILE... "
 
-	make RK_FORTH_ORD
+	make RK_FOUR_STP
 
 	RK4_SIMULATION_PATH='./bin/FHN_sim_RK4.exe'
 
@@ -68,5 +64,3 @@ else
 	echo "b) RK2"
 	echo "c) RK4"
 fi
-
-

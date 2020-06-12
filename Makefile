@@ -10,12 +10,12 @@ WARN=-Wall
 EULER: $(SRCDIR)FHN_sim_EULER.cpp	## Compile the simulation source file that uses Euler method
 	$(CC) $(WARN) $(COPT) $(OPENMP) -o $(BINDIR)FHN_sim_EULER.exe $(SRCDIR)FHN_sim_EULER.cpp
 
-.PHONY: RK_SECOND_ORD
-RK_SECOND_ORD: $(SRCDIR)FHN_sim_RK2.cpp	## Compile the simulation source file that uses 2nd order Runge Kutta method
+.PHONY: RK_TWO_STP
+RK_TWO_STP: $(SRCDIR)FHN_sim_RK2.cpp	## Compile the simulation source file that uses Runge Kutta method with 2 steps
 	$(CC) $(WARN) $(COPT) $(OPENMP) -o $(BINDIR)FHN_sim_RK2.exe $(SRCDIR)FHN_sim_RK2.cpp
 
-.PHONY: RK_FORTH_ORD
-RK_FORTH_ORD: $(SRCDIR)FHN_sim_RK4.cpp	## Compile the simulation source file that uses 4th order Runge Kutta method
+.PHONY: RK_FOUR_STP
+RK_FOUR_STP: $(SRCDIR)FHN_sim_RK4.cpp	## Compile the simulation source file that uses Runge Kutta method with 4 steps
 	$(CC) $(WARN) $(COPT) $(OPENMP) -o $(BINDIR)FHN_sim_RK4.exe $(SRCDIR)FHN_sim_RK4.cpp
 
 .PHONY: clean

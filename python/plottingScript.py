@@ -43,11 +43,11 @@ args = parser.parse_args()
 base_dir   = args.BASE_DIR
 simulation = args.SIMULATION
 
-path_to_sim_out_dir = base_dir + '//' + simulation
+path_to_sim_out_dir = base_dir + '//' + simulation # base_dir + '//' + simulation For Windows
 
 ##### Create potential, mean phase velocity and mean phase velocity horizontal cut .png files #####
-png_gen(path_to_sim_out_dir)
+png_gen(base_dir, simulation, path_to_sim_out_dir)
 
 ##### Create potential .gif file #####
-gif_gen(base_dir, simulation, path_to_sim_out_dir)
+gif_gen(path_to_sim_out_dir)
 
