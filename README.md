@@ -24,13 +24,17 @@ After downloading the software in the *Prerequisites* section you can clone this
 *Compile simulation file*
 
 ```bash
+make EULER
 
+make RK_SECOND_ORD
+
+make RK_FORTH_ORD
 ```
 
 *Run simulation*
 
 ```bash
- 
+./executeExperiment.sh
 ```
 
 ## Sample Output
@@ -54,7 +58,7 @@ Here we demonstrate the output *.png* and *.gif* files for the parameters in *Ru
 
 * *Mean phase velocity horizontal cut at the end of the simulation*
 <p align="center">
-    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/MPV_HORCUT.png" width="325" height="350">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2_SAMPLE/MPV_HORCUT.png" width="320" height="350">
 </p>
 
 * *Potential GIF*
