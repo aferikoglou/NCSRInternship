@@ -26,9 +26,9 @@ After downloading the software in the *Prerequisites* section you can clone this
 ```bash
 make EULER
 
-make RK_SECOND_ORD
+make RK_TWO_STP
 
-make RK_FORTH_ORD
+make RK_FOUR_STP
 ```
 
 *Run simulation*
