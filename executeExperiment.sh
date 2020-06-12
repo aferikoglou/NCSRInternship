@@ -1,29 +1,28 @@
 #!/bin/bash
 
+##### Helping program path #####
 PLOTTING_SCRIPT_PATH='./python/plottingScript.py'
 
-##### Simulation parameters #####
+##### Define how many threads are going to be used from OPENMP #####
+export OMP_NUM_THREADS=7
 
+##### Simulation parameters #####
 N='100'
 R='33'
 PHI='1.370796'
 TOTAL_SIM_TIME_UNITS='2000'
 SEED='15885'
 
-##### Define how many threads are going to be used from OPENMP #####
-
-export OMP_NUM_THREADS=7
-
-##### Parse command line arguments / Get the method that is going to be used #####
-
+##### Parse command line arguments #####
+# The method that is going to be used
 METHOD=${1}
+
 SIM_NAME='SIMULATION_N_'${N}'_R_'${R}'_METHOD_'${METHOD}
 
 if [ "${METHOD}" == "EULER" ];
 then
-	echo "COMPILING SIMULATION FILE... "
-
-	make EULER
+	# echo "COMPILING SIMULATION FILE... "
+	# make EULER
 
 	EULER_SIMULATION_PATH='./bin/FHN_sim_EULER.exe'
 
@@ -34,9 +33,8 @@ then
 	python ${PLOTTING_SCRIPT_PATH} resources ${SIM_NAME}
 elif [ "${METHOD}" == "RK2" ];
 then
-	echo "COMPILING SIMULATION FILE... "
-
-	make RK_TWO_STP
+	# echo "COMPILING SIMULATION FILE... "
+	# make RK_TWO_STP
 
 	RK2_SIMULATION_PATH='./bin/FHN_sim_RK2.exe'
 
@@ -47,9 +45,8 @@ then
 	python ${PLOTTING_SCRIPT_PATH} resources ${SIM_NAME}
 elif [ "${METHOD}" == "RK4" ];
 then
-	echo "COMPILING SIMULATION FILE... "
-
-	make RK_FOUR_STP
+	# echo "COMPILING SIMULATION FILE... "
+	# make RK_FOUR_STP
 
 	RK4_SIMULATION_PATH='./bin/FHN_sim_RK4.exe'
 
