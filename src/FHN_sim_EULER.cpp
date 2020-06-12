@@ -15,8 +15,8 @@
 using namespace std;
 
 /***** Parameter Declarations *****/
-double dt = 0.01; //Time step
-long it = 0;      //Current iteration
+double dt = 0.001; //Time step
+long it = 0;       //Current iteration
 
 double sigma = 0.1;    //Coupling strength
 double a = 0.5;        //Threshold parameter
@@ -40,11 +40,6 @@ double **y;      //Inhibitor variable at current iteration
 double **y_next; //Inhibitor variable at next iteration
 
 long **cycle_counter; //Cycle counter
-
-/***** Runge Kutta method k & l variables *****/
-double **k_1;
-
-double **l_1;
 
 string to_format(const int num)
 {
@@ -110,10 +105,6 @@ void init()
 
     cycle_counter = new long *[N];
 
-    k_1 = new double *[N];
-
-    l_1 = new double *[N];
-
     for (int i = 0; i < N; i++)
     {
         x[i] = new double[N];
@@ -122,10 +113,6 @@ void init()
         y_next[i] = new double[N];
 
         cycle_counter[i] = new long[N];
-
-        k_1[i] = new double[N];
-
-        l_1[i] = new double[N];
     }
 
     for (int i = 0; i < N; i++)
@@ -136,10 +123,6 @@ void init()
             y_next[i][j] = 0.0;
 
             cycle_counter[i][j] = 0;
-
-            k_1[i][j] = 0.0;
-
-            l_1[i][j] = 0.0;
         }
     }
 
@@ -162,7 +145,7 @@ int main(int argc, char *argv[])
     if (argc != 7)
     {
         cout << "Invalid input" << endl;
-        cout << "Usage : .\\FHN_sim_RK2.exe simulation_name grid_dimension coupling_radius coupling_phase total_simulation_time seed" << endl;
+        cout << "Usage : .\\FHN_sim_EULER.exe simulation_name grid_dimension coupling_radius coupling_phase total_simulation_time seed" << endl;
         exit(EXIT_FAILURE);
     }
 
@@ -182,8 +165,8 @@ int main(int argc, char *argv[])
     for (it = 0; it <= total_iter; it++)
     {
         /***** Iteration Start *****/
-        /***** Save results about activator potential *****/
-        if (it % 2000 == 0 || it == total_iter)
+        /***** Save results about current activator potential *****/
+        if (it % 10000 == 0 || it == total_iter)
         {
             cout << "Iteration " << it << " of " << total_iter << endl;
 
@@ -208,11 +191,9 @@ int main(int argc, char *argv[])
         {
             for (int j = 0; j < N; j++)
             {
-                double deri_x = x[i][j] - (x[i][j] * x[i][j] * x[i][j]) * 0.3333333 - y[i][j];
-                double deri_y = x[i][j] + a;
-
-                double sum_x = 0.0;
-                double sum_y = 0.0;
+                double deri1, deri2, sum_1 = 0.0, sum_2 = 0.0;
+                deri1 = x[i][j] - 0.3333333 * x[i][j] * x[i][j] * x[i][j] - y[i][j];
+                deri2 = x[i][j] + a;
 
                 int iLeftCorner = N + i - r;
                 int jLeftCorner = N + j - r;
@@ -225,50 +206,14 @@ int main(int argc, char *argv[])
                         int y_dist = shortest_dist(j, n % N);
                         if (x_dist * x_dist + y_dist * y_dist <= r * r && (m % N != i || n % N != j))
                         {
-                            sum_x += B[0][0] * (x[i][j] - x[m % N][n % N]) + B[0][1] * (y[i][j] - y[m % N][n % N]);
-                            sum_y += B[1][0] * (x[i][j] - x[m % N][n % N]) + B[1][1] * (y[i][j] - y[m % N][n % N]);
+                            sum_1 += B[0][0] * (x[i][j] - x[m % N][n % N]) + B[0][1] * (y[i][j] - y[m % N][n % N]);
+                            sum_2 += B[1][0] * (x[i][j] - x[m % N][n % N]) + B[1][1] * (y[i][j] - y[m % N][n % N]);
                         }
                     }
                 }
 
-                k_1[i][j] = (dt / 2) * (deri_x - sum_coeff * sum_x) / epsilon;
-                l_1[i][j] = (dt / 2) * (deri_y - sum_coeff * sum_y);
-            }
-        }
-
-        #pragma omp parallel for schedule(dynamic) collapse(2)
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < N; j++)
-            {
-                double x_val = x[i][j] + k_1[i][j];
-                double y_val = y[i][j] + l_1[i][j];
-
-                double deri_x = x_val - (x_val * x_val * x_val) * 0.3333333 - y_val;
-                double deri_y = x_val + a;
-
-                double sum_x = 0.0;
-                double sum_y = 0.0;
-
-                int iLeftCorner = N + i - r;
-                int jLeftCorner = N + j - r;
-
-                for (int m = iLeftCorner; m < iLeftCorner + 2 * r + 1; m++)
-                {
-                    for (int n = jLeftCorner; n < jLeftCorner + 2 * r + 1; n++)
-                    {
-                        int x_dist = shortest_dist(i, m % N);
-                        int y_dist = shortest_dist(j, n % N);
-                        if (x_dist * x_dist + y_dist * y_dist <= r * r && (m % N != i || n % N != j))
-                        {
-                            sum_x += B[0][0] * (x_val - x[m % N][n % N] - k_1[m % N][n % N]) + B[0][1] * (y_val - y[m % N][n % N] - l_1[m % N][n % N]);
-                            sum_y += B[1][0] * (x_val - x[m % N][n % N] - k_1[m % N][n % N]) + B[1][1] * (y_val - y[m % N][n % N] - l_1[m % N][n % N]);
-                        }
-                    }
-                }
-
-                x_next[i][j] = x[i][j] + dt * (deri_x - sum_coeff * sum_x) / epsilon;
-                y_next[i][j] = y[i][j] + dt * (deri_y - sum_coeff * sum_y);
+                x_next[i][j] = x[i][j] + dt * (deri1 - sum_coeff * sum_1) / epsilon;
+                y_next[i][j] = y[i][j] + dt * (deri2 - sum_coeff * sum_2);
 
                 /***** Change cycle counter *****/
                 if (x[i][j] < 0 && x_next[i][j] > 0 && it > (int)(1000 / dt))
@@ -323,6 +268,29 @@ int main(int argc, char *argv[])
     output_file << "Simulation Duration = " << duration << " seconds" << endl;
 
     output_file.close();
+
+    /***** Delete matrices *****/
+    for (int i = 0; i < 2; i++)
+    {
+	delete[] B[i];
+    }
+
+    delete[] B;
+
+    for (int i = 0; i < N; i++) 
+    {
+        delete[] x[i];
+	delete[] x_next[i]; 
+	delete[] y[i]; 
+	delete[] y_next[i]; 
+	delete[] cycle_counter[i];    
+    }
+
+    delete[] x;
+    delete[] x_next;
+    delete[] y;
+    delete[] y_next;
+    delete[] cycle_counter;
 
     return 0;
 }

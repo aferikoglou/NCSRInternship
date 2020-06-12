@@ -383,5 +383,44 @@ int main(int argc, char *argv[])
 
     output_file.close();
 
+    /***** Delete matrices *****/
+    for (int i = 0; i < 2; i++)
+    {
+        delete[] B[i];
+    }
+ 
+    delete[] B;
+
+    for (int i = 0; i < N; i++)
+    {
+        delete[] x[i];
+        delete[] x_next[i];
+        delete[] y[i];
+        delete[] y_next[i];
+        delete[] cycle_counter[i];
+        delete[] k_1[i];
+	delete[] k_2[i];
+	delete[] k_3[i];
+	delete[] k_4[i];
+        delete[] l_1[i];
+	delete[] l_2[i];
+	delete[] l_3[i];
+	delete[] l_4[i];
+    }
+
+    delete[] x;
+    delete[] x_next;
+    delete[] y;
+    delete[] y_next;
+    delete[] cycle_counter;
+    delete[] k_1;
+    delete[] k_2;
+    delete[] k_3;
+    delete[] k_4;
+    delete[] l_1;
+    delete[] l_2;
+    delete[] l_3;
+    delete[] l_4;
+    
     return 0;
 }

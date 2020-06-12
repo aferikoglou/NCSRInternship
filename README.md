@@ -43,7 +43,7 @@ python .\out_plotting_script.py resources simulation_N_100_R_33
 
 ## Sample Output
 
-Here we demonstrate the output *.png* and *.gif* files for the parameters in* Run simulation* section.
+Here we demonstrate the output *.png* and *.gif* files for the parameters in *Run simulation* section.
 
 * *Initial conditions (random)*
 <img src="images/POT_IT_000000.png" width="350" height="350">
