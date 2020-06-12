@@ -31,7 +31,7 @@ make RK_TWO_STP
 make RK_FOUR_STP
 ```
 
-*Run simulation*
+*Run simulation and Plot output data*
 
 ```bash
 ./executeExperiment.sh
