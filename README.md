@@ -46,19 +46,19 @@ python .\out_plotting_script.py resources simulation_N_100_R_33
 Here we demonstrate the output *.png* and *.gif* files for the parameters in *Run simulation* section.
 
 * *Initial conditions (random)*
-<img src="images/POT_IT_000000.png" width="350" height="350">
+<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_000000.png" width="350" height="350">
 
 * *Potential for each neuron in the grid after 2000 time units*
-<img src="images/POT_IT_200000.png" width="350" height="350">
+<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_200000.png" width="350" height="350">
 
 * *Mean phase velocity for each neuron in the grid at the end of the simulation*
-<img src="images/MPV.png" width="350" height="350">
+<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV.png" width="350" height="350">
 
 * *Mean phase velocity horizontal cut at the end of the simulation*
-<img src="images/MPV_HORCUT.png" width="300" height="350">
+<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV_HORCUT.png" width="300" height="350">
 
 * *Potential GIF*
-<img src="images/POT_GIF.gif" width="350" height="350">
+<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_GIF.gif" width="350" height="350">
 
 ## Author
 
