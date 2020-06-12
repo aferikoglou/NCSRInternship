@@ -21,7 +21,7 @@ These instructions will get you a copy of the project on your local machine.
 
 After downloading the software in the *Prerequisites* section you can clone this repository on your local machine.
 
-*Compile simulation file*
+*Compile simulation files*
 
 ```bash
 make EULER

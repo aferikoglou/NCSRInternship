@@ -14,7 +14,7 @@ def gif_gen(path_to_sim_out_dir):
     for img in sorted(imgs):
         frame = Image.open(img)
         frames.append(frame)
-    frames[0].save(path_to_sim_out_dir + '//POT_GIF.gif', format='GIF', append_images=frames[1:], save_all=True, duration=100, loop=0)
+    frames[0].save(path_to_sim_out_dir + '//POT_GIF.gif', format='GIF', append_images=frames[1:], save_all=True, duration=200, loop=0)
 
 
 def png_gen(base_dir, simulation, path_to_sim_out_dir):
