@@ -272,18 +272,18 @@ int main(int argc, char *argv[])
     /***** Delete matrices *****/
     for (int i = 0; i < 2; i++)
     {
-	delete[] B[i];
+		delete[] B[i];
     }
 
     delete[] B;
 
     for (int i = 0; i < N; i++) 
     {
-        delete[] x[i];
-	delete[] x_next[i]; 
-	delete[] y[i]; 
-	delete[] y_next[i]; 
-	delete[] cycle_counter[i];    
+		delete[] x[i];
+		delete[] x_next[i]; 
+		delete[] y[i]; 
+		delete[] y_next[i]; 
+		delete[] cycle_counter[i];    
     }
 
     delete[] x;

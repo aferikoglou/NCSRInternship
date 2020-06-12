@@ -334,13 +334,13 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < N; i++)
     {
-        delete[] x[i];
-        delete[] x_next[i];
-        delete[] y[i];
-        delete[] y_next[i];
-        delete[] cycle_counter[i];
-	delete[] k_1[i];
-	delete[] l_1[i];
+		delete[] x[i];
+		delete[] x_next[i];
+		delete[] y[i];
+		delete[] y_next[i];
+		delete[] cycle_counter[i];
+		delete[] k_1[i];
+		delete[] l_1[i];
     }
  
     delete[] x;
