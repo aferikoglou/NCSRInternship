@@ -21,24 +21,16 @@ These instructions will get you a copy of the project on your local machine.
 
 After downloading the software in the *Prerequisites* section you can clone this repository on your local machine.
 
-Before you start create a folder with the name __resources__. This will be the folder in which the output folders will be created.
-
 *Compile simulation file*
 
-```cpp
-g++ -Wall -O3 -fopenmp -o .\FHN_sim_RK2.exe .\FHN_sim_RK2.cpp
+```bash
+
 ```
 
 *Run simulation*
 
-```cpp
-.\FHN_sim_RK2.exe simulation_N_100_R_33 100 33 1.370796 2000 15885 
-```
-
-*Run python plotting script*
-
-```
-python .\out_plotting_script.py resources simulation_N_100_R_33
+```bash
+ 
 ```
 
 ## Sample Output
@@ -46,19 +38,29 @@ python .\out_plotting_script.py resources simulation_N_100_R_33
 Here we demonstrate the output *.png* and *.gif* files for the parameters in *Run simulation* section.
 
 * *Initial conditions (random)*
-<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_000000.png" width="350" height="350">
+<p align="center">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_000000.png" width="350" height="350">
+</p>
 
 * *Potential for each neuron in the grid after 2000 time units*
-<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_200000.png" width="350" height="350">
+<p align="center">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_IT_200000.png" width="350" height="350">
+</p>
 
 * *Mean phase velocity for each neuron in the grid at the end of the simulation*
-<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV.png" width="350" height="350">
+<p align="center">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV.png" width="350" height="350">
+</p>
 
 * *Mean phase velocity horizontal cut at the end of the simulation*
-<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV_HORCUT.png" width="300" height="350">
+<p align="center">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/MPV_HORCUT.png" width="300" height="350">
+</p>
 
 * *Potential GIF*
-<img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_GIF.gif" width="350" height="350">
+<p align="center">
+    <img src="resources/SIMULATION_N_100_R_33_METHOD_RK2/POT_GIF.gif" width="350" height="350">
+</p>
 
 ## Author
 
