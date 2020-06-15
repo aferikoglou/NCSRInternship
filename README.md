@@ -21,25 +21,21 @@ These instructions will get you a copy of the project on your local machine.
 
 After downloading the software in the *Prerequisites* section you can clone this repository on your local machine.
 
-*Compile simulation files*
+*Compile simulation file*
 
 ```bash
-make EULER
-
-make RK_TWO_STP
-
-make RK_FOUR_STP
+make RK_TWO_STP // or EULER or RK_FOUR_STP
 ```
 
-*Run simulation and Plot output data*
+*Run simulation and plot output data*
 
 ```bash
-./executeExperiment.sh
+./executeExperiment.sh RK2 // or EULER or RK_TWO_STP
 ```
 
 ## Sample Output
 
-Here we demonstrate the output *.png* and *.gif* files for the parameters in *Run simulation* section.
+Here we demonstrate the output *.png* and *.gif* files for the parameters in *Run simulation and plot output data* section.
 
 * *Initial conditions (random)*
 <p>
