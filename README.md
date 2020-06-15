@@ -30,7 +30,7 @@ make RK_TWO_STP // or EULER or RK_FOUR_STP
 *Run simulation and plot output data*
 
 ```bash
-./executeExperiment.sh RK2 // or EULER or RK_TWO_STP
+./executeExperiment.sh RK2 // or EULER or RK_4
 ```
 
 ## Sample Output
